@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+<!--<script src="https://cdn.jsdeliver.net/npm/vue/dist/vue.js"></script>---->
+<script src="https://unpkg.com/vue@next" defer></script>
+<script src="app.js" defer></script>
+
+    
+
+
+</head>
+<body>
+    <section id="user-name">
+        <!-- output your name-->
+        <header>
+            <h1>{{myName}}</h1> 
+        </header>
+        <hr>
+         <!-- Output your Age -->
+        <p>Age: {{myAge}}</p>
+        <!-- Output your Age + 5-->
+        <p>Age after 5 Years: {{myAge2}}</p>
+        <!-- Output a random number (0-1) -->
+    
+        <p> Favorite Number (0-1) : {{myFavoriteNumber()}}</p>
+        
+
+
+
+
+            <!-- Display some image you found via google -->
+        <div class="row">
+            <img v-for="img in Images" v-bind:src="Images"/>
+
+        </div>
+
+        <br> <br>
+        
+        
+        <!-- Prepopulate the input field with your name via the "value attribute." -->
+        <input type="text" v-model="name" >
+
+
+    </section>
+
+
+</body>
+</html>
